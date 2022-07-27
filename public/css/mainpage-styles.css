@@ -1,0 +1,154 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.navbar {
+  padding-left: 10px;
+}
+
+.navbar-brand {
+  font-family: 'Titan One', cursive;
+}
+
+.nav-link {
+  color: black;
+}
+
+.home-page {
+  /* background image width */
+  background: url("../img/1.gif") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* background image height */
+  height: 500px;
+  /* font color */
+  color: white;
+}
+
+.home-page-text-div {
+  padding-top: 200px;
+  text-align: center;
+}
+
+.section-2-button {
+  margin: auto 5px;
+  width: 100px;
+}
+
+.section-3-main-div {
+  margin-bottom: 20px;
+}
+
+.section-3-heading {
+  margin: 50px auto 25px;
+  text-align: center;
+}
+
+.section-3-grid-div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-3-img {
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+}
+
+.section-4-main-div {
+  height: 300px;
+  padding: auto 0;
+  text-align: center;
+}
+
+.section-4-image-grid-div {
+  text-align: center;
+}
+
+.section-4-img-div {
+  width: 50%;
+}
+
+.section-4-img {
+  height: 300px;
+  text-align: center;
+}
+
+.section-4-text-grid-div {
+  padding-top: 0;
+  padding-bottom: auto;
+  text-align: justify;
+  margin: auto;
+}
+
+.section-5-main-div {
+  background-color: black;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 5px;
+}
+
+.section-5-logo {
+  color: white;
+  text-decoration: none;
+  font-family: 'Titan One', cursive;
+}
+
+.section-5-logo:hover {
+  color: white;
+}
+
+.section-5-text-link {
+  color: white;
+  text-decoration: none;
+  margin: auto 4px;
+  font-size: 12px;
+}
+
+.section-5-text-link:hover {
+  color: white;
+}
+
+.section-5-copyright {
+  color: white;
+  margin-top: 50px;
+  font-size: 10px;
+}
+
+/* not for Mobile */
+@media screen and (min-width: 800px) {
+  .section-4-text-grid-div {
+    padding-top: 100px;
+    text-align: left;
+  }
+}
+
+/* */
+input {
+  margin: 10px;
+}
+
+.sign-cross-link {
+  text-decoration: none;
+  color: red;
+}
+.sign-cross-link:hover {
+  text-decoration: none;
+  color: brown;
+}
+
+.profile-buttons {
+  margin: 10px;
+}
+
+.donated-card {
+  margin: 100px;
+}
+
+.bold {
+  font-weight: 900;
+}
+/* */
