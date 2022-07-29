@@ -25,7 +25,7 @@ router.post('/', (req, res) => {
   }
 
   if (errors.length > 0) {
-    res.render('register', {
+    res.render('register.ejs', {
       errors,
       name,
       email,
@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
     User.findOne({ email: email }).then(user => {
       if (user) {
         errors.push({ msg: 'Username already exists' });
-        res.render('register', {
+        res.render('register.ejs', {
           errors,
           name,
           email,

@@ -3,7 +3,7 @@ const router = express.Router()
 const { ensureAuthenticated, forwardAuthenticated } = require('../middleware/auth')
 
 router.get('/', ensureAuthenticated, (req,res) => {
-    if(req.user.receivedBy.length === 0) res.render('msg.ejs', { msg: 'No receivers yet!', addType: 'addDonor' })
+    if(req.user.receivedBy.length === 0) res.render('msg.ejs', { msg: 'No receivers yet!', addType: 'addReceiver' })
     else res.render('received.ejs', { user: req.user })
 })
 
