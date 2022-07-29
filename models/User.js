@@ -70,38 +70,41 @@ const UserSchema = new mongoose.Schema({
         required: true
       },
       date: {
-        type: Date,
-        default: Date.now,
+        type: String,
         required: true
       }
     }],
     default: []
   },
-  recievedBy: {
+  receivedBy: {
     type: [{
-      recieverName: {
+      receiverName: {
         type: String,
         required: true
       },
-      recieverContactNumber: {
+      receiverContactNumber: {
         type: String,
         required: true
       },
-      recieverEmail: {
+      receiverEmail: {
         type: String,
         required: true
       },
-      recieverAddress: {
+      receiverAddress: {
         type: String,
         required: true
       },
-      recieverBloodGroup: {
+      receiverBloodGroup: {
         type: String,
+        required: true
+      },
+      receivedAmount: {
+        type: Number,
         required: true
       },
       date: {
-        type: Date,
-        default: Date.now
+        type: String,
+        required: true
       }
     }],
     default: [],

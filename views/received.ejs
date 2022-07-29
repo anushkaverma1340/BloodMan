@@ -12,7 +12,7 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+  
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,12 +25,12 @@
     <link rel="stylesheet" href="public/css/mainpage-styles.css">
 
   </head>
-  <body>
+  <body style="font-family:'Raleway',sans-serif;">
 
     <!-- section 1 Navbar -->
     <nav class="navbar navbar-expand-lg">
       <div id="section-1" class="container-fluid">
-        <a class="navbar-brand logo" href="#section-1">bM</a>
+        <a style="font-family:'Titan One',cursive;" class="navbar-brand logo" href="#section-1">bM</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,16 +48,34 @@
       </div>
     </nav>
 
-    <div class="row mt-5">
-      <div class="col-md-6 m-auto">
-        <div class="card card-body">
-            <h1><%=user.name%></h1>
-            <p><%=user.email%></p>
-            <!-- <a class="btn btn-danger profile-buttons" href="/profile/availability"> Availability</a>
-            <a class="btn btn-danger profile-buttons" href="/profile/donated">Donated</a>
-            <a class="btn btn-danger profile-buttons" href="/profile/received">Received</a> -->
+
+
+
+    <div id="donated-container" class="container no-gutters" style="--bs-gutter-x:0;">
+      <div class="row g-0" style="text-align:center;">
+
+        <% user.receivedBy.forEach(function(receiver){ %>
+          <div style="margin:10px; --bs-card-border-width:2px;" class="col-md-12 card">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><span style="font-weight:900;">Receiver Name:</span> <%=receiver.receiverName%></li>
+              <li class="list-group-item"><span style="font-weight:900;">Receiver Contact Number:</span> <%=receiver.receiverContactNumber%></li>
+              <li class="list-group-item"><span style="font-weight:900;">Receiver Email:</span> <%=receiver.receiverEmail%></li>
+              <li class="list-group-item"><span style="font-weight:900;">Receiver Address:</span> <%=receiver.receiverAddress%></li>
+              <li class="list-group-item"><span style="font-weight:900;">Receiver Blood Group:</span> <%=receiver.receiverBloodGroup%></li>
+              <li class="list-group-item"><span style="font-weight:900;">Received amount:</span> <%=receiver.receivedAmount%></li>
+              <li class="list-group-item"><span style="font-weight:900;">Receive Date:</span> <%=receiver.date%></li>
+            </ul>
         </div>
+        <%})%>
+        
       </div>
     </div>
-  </body>
+
+    <div style="text-align: center; margin: 20px;" >
+      <a class="btn btn-danger" href="/profile/addReceiver">Add Donation</a>
+    </div>
+
+
+
+ </body>
 </html>

@@ -5,6 +5,9 @@
 
     <!-- Title -->
     <title>Bleed For Good</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/public/favicon/favicon.ico">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -22,12 +25,12 @@
     <link rel="stylesheet" href="public/css/mainpage-styles.css">
 
   </head>
-  <body>
+  <body style="font-family:'Raleway',sans-serif;">
 
     <!-- section 1 Navbar -->
     <nav class="navbar navbar-expand-lg">
       <div id="section-1" class="container-fluid">
-        <a class="navbar-brand logo" href="#section-1">bfg</a>
+        <a class="navbar-brand logo" style="font-family:'Titan One',cursive;" href="#section-1">bM</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,10 +38,10 @@
           <div class="navbar-nav">
             <a class="nav-link" href="/profile">Profile</a>
             <a class="nav-link" href="/profile/availability">Availability</a>
-            <a class="nav-link" href="/profile/donated">Donated</a>
+            <a class="nav-link" href="/profile/donated">Donors</a>
             <a class="nav-link" href="/profile/addDonor">+Donor</a>
-            <a class="nav-link" href="/profile/recieved">Recieved</a>
-            <a class="nav-link" href="/profile/addReciever">+Reciever</a>
+            <a class="nav-link" href="/profile/received">Receivers</a>
+            <a class="nav-link" href="/profile/addReceiver">+Receiver</a>
             <a class="nav-link" href="/logout">Logout</a>
           </div>
         </div>
@@ -54,31 +57,27 @@
 
 
 
-        <% users.forEach(function(user){ %>
-          <div style="margin:10px;" class="col-md-3 card donated-card">
+        <% user.donatedBy.forEach(function(donor){ %>
+          <div style="margin:10px; --bs-card-border-width:2px;" class="col-md-12 card">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><span class="bold">Donor Name:</span> <%=user.donorName%></li>
-              <li class="list-group-item"><span class="bold">Donor Contact Number:</span> <%=user.donorContactNumber%></li>
-              <li class="list-group-item"><span class="bold">Donor Email:</span> <%=user.donorEmail%></li>
-              <li class="list-group-item"><span class="bold">Donor Address:</span> <%=user.donorAddress%></li>
-              <li class="list-group-item"><span class="bold">Donor Blood Group:</span> <%=user.donorBloodGroup%></li>
-              <li class="list-group-item"><span class="bold">Donor Date:</span> <%=user.date%></li>
+              <li class="list-group-item"><span style="font-weight:900;">Donor Name:</span> <%=donor.donorName%></li>
+              <li class="list-group-item"><span style="font-weight:900;">Donor Contact Number:</span> <%=donor.donorContactNumber%></li>
+              <li class="list-group-item"><span style="font-weight:900;">Donor Email:</span> <%=donor.donorEmail%></li>
+              <li class="list-group-item"><span style="font-weight:900;">Donor Address:</span> <%=donor.donorAddress%></li>
+              <li class="list-group-item"><span style="font-weight:900;">Donor Blood Group:</span> <%=donor.donorBloodGroup%></li>
+              <li class="list-group-item"><span style="font-weight:900;">Donation Date:</span> <%=donor.date%></li>
             </ul>
         </div>
         <%})%>
-
-
-        <a href=""></a>
-        
-
 
 
         
       </div>
     </div>
 
-
-
+    <div style="text-align: center; margin: 20px;" >
+      <a class="btn btn-danger" href="/profile/addDonor">Add Donation</a>
+    </div>
 
  </body>
 </html>

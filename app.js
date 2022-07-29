@@ -55,7 +55,6 @@ app.use(function(req, res, next) {
 
 // Routes
 app.use('/', require('./routes/index.js'));
-app.use('/users', require('./routes/users.js')); ///////////////////////////////////
 app.use('/navpages', require('./routes/navpages.js'));
 app.use('/login', require('./routes/login.js'));
 app.use('/register', require('./routes/register.js'));
@@ -63,10 +62,13 @@ app.use('/profile', require('./routes/profile.js'));
 app.use('/profile/availability', require('./routes/availability.js'));
 app.use('/profile/donated', require('./routes/donated.js'));
 app.use('/profile/addDonor', require('./routes/addDonor.js'));
-// app.use('/:username/recieved', require('./routes/recieved.js'));
-// app.use('/:username/donated/add', require('./routes/addDonated.js'));
-// app.use('/:username/recieved/add', require('./routes/addRecieved.js'));
+app.use('/profile/received', require('./routes/received.js'));
+app.use('/profile/addReceiver', require('./routes/addReceiver.js'));
 app.use('/logout', require('./routes/logout.js'));
+
+app.get('/test', (req,res) => {
+  console.log(new Date().toDateString())
+})
 
 const PORT = process.env.PORT || 5000;
 

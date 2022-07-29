@@ -126,7 +126,6 @@ input::placeholder {
   width: 100px;
 }
 
-/* Copied from mainpage */
 .section-5-main-div {
   background-color: black;
   text-align: center;
@@ -149,7 +148,6 @@ input::placeholder {
   color: white;
   text-decoration: none;
   margin: auto 4px;
-  /* font-size: 12px; */
 }
 
 .section-5-text-link:hover {
@@ -161,9 +159,7 @@ input::placeholder {
   margin-top: 25px;
   font-size: 10px;
 }
-/* Copy Paste */
 
-/* only for Mobile */
 @media screen and (max-width: 20px) {
   .about-img {
     margin-bottom: 100px;

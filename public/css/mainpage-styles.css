@@ -125,10 +125,18 @@ body {
     text-align: left;
   }
 }
+/* not for Mobile */
 
-/* */
 input {
   margin: 10px;
+}
+
+button {
+  text-align: center;
+}
+
+a {
+  text-align: center;
 }
 
 .sign-cross-link {
@@ -144,11 +152,6 @@ input {
   margin: 10px;
 }
 
-.donated-card {
-  margin: 100px;
-}
-
 .bold {
   font-weight: 900;
 }
-/* */
